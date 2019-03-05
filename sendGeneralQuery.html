@@ -1,0 +1,44 @@
+<!-- Send General Query HTML Page
+		By: Timothy Wright -->
+<Html>
+<!--This file, sendGeneralQuery.html, is to send a query, which will be picked up
+and processed by showGeneralQueryResult.php -->
+<Head>
+<Style Type="text/css">
+<!--The following specifies the style of this page. -->
+<!--
+Body, P, TD {color: black; font-family: verdana; font-size: 10 pt}
+H1 {color: black; font-family: arial; font-size:12 pt}
+-->
+</Style>
+</Head>
+<!--A table with only one row, consisting of two cells, the first, 1/6 width wise,
+being the left cushion; and the rest of the page contains the form -->
+<Table Border=0 cellPadding=10 Width=100%>
+<!--Now define the row-->
+<Tr>
+<!--The following cell specifies the left cushion edge-->
+<Td BGColor="F0F8FF" Align=Center VAlign=top Width=17%> </Td>
+<!--The following gives the right entry form part, completely white-->
+
+<Td BGColor="FFFFFF" Align=Left VAlign=Top Width=83%>
+<H1>Query submission form;</H1>
+<p>Enter your query and we will send you back the result.</p>
+<!--Data will be transmitted via the post method, and will be handled by the-->
+<!-- specific file. We will talk in detail about such methods, later -->
+<Form Method="post" Action="showGeneralQueryResult.php">
+<!--First input box, with a name "query", thus earmarked with the name -->
+<!-- $_POST["query"] in the handler. The value will be filled in by the user -->
+<Input Type="text" Size=25 Name="query">
+<BR><BR>
+<!--The sumbit button, with the name being $_POST["submit"], -->
+<!--and the message shown being "Submit"-->
+<!--When clicked, the filled query is sent over -->
+<Input Type="submit" Name="submit" Value="Submit">
+</Form>
+</Td>
+<!--end of the row definition>
+</Tr>
+</Table>
+</Body>
+</Html>
